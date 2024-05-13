@@ -1,0 +1,12 @@
+[code]
+editor = 'nvim'
+lang = 'cpp'
+comment_problem_desc = true
+comment_leading = '//'
+test = true
+
+[storage]
+cache = 'Problems'
+code = 'code'
+root = '~/Programming/leetcode'
+scripts = 'scripts'
