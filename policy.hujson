@@ -1,0 +1,59 @@
+// This tailnet's ACLs are maintained in https://github.com/C4theBomb/dotfiles
+{
+	// Declare static groups of users. Use autogroups for all users or users with a specific role.
+	"groups": {
+	    "group:oasys": [],
+	},
+
+	// Define the tags which can be applied to devices and by which users.
+	"tagOwners": {
+		"tag:oasys": ["autogroup:owner"],
+	},
+
+	// Define access control lists for users, groups, autogroups, tags,
+	// Tailscale IP addresses, and subnet ranges.
+	"acls": [
+		// Allow all connections for owner.
+		{
+			"action": "accept",
+			"src": ["*"],
+			"dst": ["*:*"]
+		},
+	],
+
+	// Define device posture rules requiring devices to meet certain criteria to access parts of your system.
+	"postures": {
+		// Require devices running a stable Tailscale version
+	 	"posture:latestDesktop": [
+	 	    "node:os IN ['linux', 'macos', 'windows']",
+	 	    "node:tsReleaseTrack == 'stable'",
+	 	],
+
+	    // Require devices running mobile and a stable Tailscale version.
+	 	"posture:latestMobile": [
+	 	    "node:os IN ['android', 'ios']",
+	 	    "node:tsReleaseTrack == 'stable'",
+	 	],
+	},
+
+	// Define users and devices that can use Tailscale SSH.
+	"ssh": [
+		// Allow owner to ssh into all owned devices
+		{
+			"action": "accept",
+			"src":    ["autogroup:owner"],
+			"dst":    ["autogroup:self"],
+			"users":  ["autogroup:nonroot"],
+		},
+	],
+
+	// Test access rules every time they're saved.
+	"sshTests": [
+		{
+			"src": "c4patino@gmail.com",
+			"dst": ["c4patino@gmail.com"],
+	 		"accept": ["autogroup:nonroot"],
+	 		"deny": ["root"],
+		},
+	],
+}
