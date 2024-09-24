@@ -39,6 +39,20 @@
 		},
 	],
 
+	// Define access grants for shared file directories.
+	"grants": [
+		{
+			"src": ["autogroup:owner"],
+			"dst": ["*"],
+			"app": {
+				"tailscale.com/cap/drive": [{
+					"shares": ["*"],
+					"access": "rw"
+				}]
+			}
+		},
+	],
+
 	// Define device posture rules requiring devices to meet certain criteria to access parts of your system.
 	"postures": {
 		// Require devices running desktop to have a stable Tailscale version
