@@ -35,7 +35,7 @@
 		},
 		{
 			"target": ["c4patino@gmail.com"],
-			"attr": ["drive:access"],
+			"attr": ["drive:access", "drive:share"],
 		},
 	],
 
