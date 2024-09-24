@@ -20,7 +20,7 @@
 			"dst": ["*:*"]
 		},
 		{
-			"action": "check",
+			"action": "accept",
 			"src": ["group:oasys"],
 			"dst": ["tag:server:*"],
 		},
