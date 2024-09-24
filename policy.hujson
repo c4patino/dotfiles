@@ -64,7 +64,7 @@
 			"action": "check",
 			"src": ["group:oasys"],
 			"dst": ["tag:server"],
-			"users": ["localpart:*@*"],
+			"users": ["oasys"],
 		},
 	],
 
@@ -76,11 +76,12 @@
 	 		"accept": ["autogroup:nonroot"],
 	 		"deny": ["root"],
 		},
-		{
-			"src": "group:oasys",
-			"dst": ["tag:server"],
-	 		"accept": ["localpart:*@*"],
-	 		"deny": ["root", "otheruser"],
-		},
+		// These tests are broken for the moment: https://github.com/tailscale/tailscale/issues/11790
+		// {
+		//     "src": "group:oasys",
+		//     "dst": ["tag:server"],
+		//     "accept": ["oasys"],
+		//     "deny": ["root", "otheruser"],
+		// },
 	],
 }
