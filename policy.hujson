@@ -45,7 +45,7 @@
 			"src": ["autogroup:owner"],
 			"dst": ["*"],
 			"app": {
-				"tailscale.com/cap/drive": [{
+				"tail8b9fd9.ts.net/arisu/shared": [{
 					"shares": ["*"],
 					"access": "rw"
 				}]
