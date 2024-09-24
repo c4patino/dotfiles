@@ -7,7 +7,7 @@
 
 	// Define the tags which can be applied to devices and by which users.
 	"tagOwners": {
-		"tag:oasys": ["autogroup:owner"],
+		"tag:server": ["autogroup:owner"],
 	},
 
 	// Define access control lists for users, groups, autogroups, tags,
@@ -16,20 +16,34 @@
 		// Allow all connections for owner.
 		{
 			"action": "accept",
-			"src": ["*"],
+			"src": ["autogroup:owner"],
 			"dst": ["*:*"]
+		},
+		{
+			"action": "check",
+			"src": ["group:oasys"],
+			"dst": ["tag:server:*"],
+		},
+	],
+
+
+	// Define attributes for individual nodes within the network.
+	"nodeAttrs": [
+		{
+			"target": ["c4patino@gmail.com", "tag:server"],
+			"attr": ["drive:share"],
 		},
 	],
 
 	// Define device posture rules requiring devices to meet certain criteria to access parts of your system.
 	"postures": {
-		// Require devices running a stable Tailscale version
+		// Require devices running desktop to have a stable Tailscale version
 	 	"posture:latestDesktop": [
 	 	    "node:os IN ['linux', 'macos', 'windows']",
 	 	    "node:tsReleaseTrack == 'stable'",
 	 	],
 
-	    // Require devices running mobile and a stable Tailscale version.
+	    // Require devices running mobile to have a stable Tailscale version.
 	 	"posture:latestMobile": [
 	 	    "node:os IN ['android', 'ios']",
 	 	    "node:tsReleaseTrack == 'stable'",
@@ -41,9 +55,16 @@
 		// Allow owner to ssh into all owned devices
 		{
 			"action": "accept",
-			"src":    ["autogroup:owner"],
-			"dst":    ["autogroup:self"],
-			"users":  ["autogroup:nonroot"],
+			"src": ["autogroup:owner"],
+			"dst": ["autogroup:self", "tag:server"],
+			"users": ["autogroup:nonroot"],
+		},
+		// Allow anyone from OASYS to access oasys machines
+		{
+			"action": "check",
+			"src": ["group:oasys"],
+			"dst": ["tag:server"],
+			"users": ["localpart:*@*"],
 		},
 	],
 
@@ -51,9 +72,15 @@
 	"sshTests": [
 		{
 			"src": "c4patino@gmail.com",
-			"dst": ["c4patino@gmail.com"],
+			"dst": ["c4patino@gmail.com", "tag:server"],
 	 		"accept": ["autogroup:nonroot"],
 	 		"deny": ["root"],
+		},
+		{
+			"src": "group:oasys",
+			"dst": ["tag:server"],
+	 		"accept": ["localpart:*@*"],
+	 		"deny": ["root", "otheruser"],
 		},
 	],
 }
