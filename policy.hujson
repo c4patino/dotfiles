@@ -30,7 +30,7 @@
 	// Define attributes for individual nodes within the network.
 	"nodeAttrs": [
 		{
-			"target": ["c4patino@gmail.com", "tag:server"]
+			"target": ["c4patino@gmail.com", "tag:server"],
 			"attr": ["drive:access", "drive:share"],
 		},
 	],
