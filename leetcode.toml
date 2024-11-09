@@ -1,6 +1,6 @@
 [code]
 editor = 'nvim'
-lang = 'cpp'
+lang = 'rust'
 comment_problem_desc = true
 comment_leading = '//'
 test = true
