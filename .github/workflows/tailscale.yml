@@ -12,7 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
       - name: Fetch version-cache.json
         uses: actions/cache@v4
         with:
@@ -20,18 +19,14 @@ jobs:
           key: version-cache.json-${{ github.run_id }}
           restore-keys: |
             version-cache.json-
-
       - name: Deploy ACL
-        if: github.event_name == 'push'
         id: deploy-acl
         uses: tailscale/gitops-acl-action@v1
         with:
           api-key: ${{ secrets.TS_API_KEY }}
           tailnet: ${{ secrets.TS_TAILNET }}
           action: apply
-
       - name: Test ACL
-        if: github.event_name == 'pull_request'
         id: test-acl
         uses: tailscale/gitops-acl-action@v1
         with:
