@@ -1,5 +1,12 @@
 // This tailnet's ACLs are maintained in https://github.com/C4theBomb/dotfiles
 {
+	// Declare host machines
+	"hosts": {
+		"arisu": "100.89.24.88",
+		"kokoro": "100.126.34.64",
+		"chibi": "100.101.224.25",
+	},
+
 	// Declare static groups of users. Use autogroups for all users or users with a specific role.
 	"groups": {
 	    "group:oasys": [],
@@ -22,10 +29,14 @@
 		{
 			"action": "accept",
 			"src": ["group:oasys"],
-			"dst": ["tag:server:*"],
+			"dst": ["tag:server:*"]
+		},
+		{
+			"action": "accept",
+			"src": ["autogroup:shared"],
+			"dst": ["arisu:25565"]
 		},
 	],
-
 
 	// Define attributes for individual nodes within the network.
 	"nodeAttrs": [
@@ -82,7 +93,7 @@
 		},
 	],
 
-	// Test access rules every time they're saved.
+	// Test ssh access rules every time they're saved.
 	"sshTests": [
 		{
 			"src": "c4patino@gmail.com",
