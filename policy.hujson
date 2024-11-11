@@ -29,7 +29,7 @@
 		{
 			"action": "accept",
 			"src": ["group:oasys"],
-			"dst": ["tag:server:*"]
+			"dst": ["arisu:*"]
 		},
 		{
 			"action": "accept",
@@ -81,7 +81,7 @@
 		{
 			"action": "accept",
 			"src": ["autogroup:owner"],
-			"dst": ["autogroup:self", "tag:server"],
+			"dst": ["autogroup:self"],
 			"users": ["autogroup:nonroot"],
 		},
 		// Allow anyone from OASYS to access oasys machines
@@ -97,7 +97,7 @@
 	"sshTests": [
 		{
 			"src": "c4patino@gmail.com",
-			"dst": ["c4patino@gmail.com", "tag:server"],
+			"dst": ["c4patino@gmail.com"],
 	 		"accept": ["autogroup:nonroot"],
 	 		"deny": ["root"],
 		},
