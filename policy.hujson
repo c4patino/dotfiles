@@ -34,7 +34,7 @@
 		{
 			"action": "accept",
 			"src": ["autogroup:shared"],
-			"dst": ["arisu:25565"]
+			"dst": ["*:25565"]
 		},
 	],
 
