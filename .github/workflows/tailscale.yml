@@ -20,6 +20,7 @@ jobs:
           restore-keys: |
             version-cache.json-
       - name: Deploy ACL
+        if: github.event_name == 'push'
         id: deploy-acl
         uses: tailscale/gitops-acl-action@v1
         with:
@@ -27,6 +28,7 @@ jobs:
           tailnet: ${{ secrets.TS_TAILNET }}
           action: apply
       - name: Test ACL
+        if: github.event_name == 'pull_request'
         id: test-acl
         uses: tailscale/gitops-acl-action@v1
         with:
