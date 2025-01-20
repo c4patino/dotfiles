@@ -2,7 +2,7 @@
 {
 	// Declare host machines
 	"hosts": {
-		"arisu": "100.89.24.88",
+		"arisu": "100.117.106.23",
 		"kokoro": "100.69.45.111",
 		"chibi": "100.101.224.25",
 	},
