@@ -1,4 +1,4 @@
-// This tailnet's ACLs are maintained in https://github.com/C4theBomb/dotfiles
+// This tailnet's ACLs are maintained in https://github.com/c4patino/dotfiles
 {
 	// Declare host machines
 	"hosts": {
