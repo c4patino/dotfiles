@@ -1,4 +1,4 @@
-name: Sync Tailscale ACLs
+name: sync tailscale acls
 
 on:
   push:
@@ -9,17 +9,17 @@ on:
 jobs:
   acls:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-      - name: Fetch version-cache.json
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: fetch version cache
         uses: actions/cache@v4
         with:
           path: ./version-cache.json
           key: version-cache.json-${{ github.run_id }}
           restore-keys: |
             version-cache.json-
-      - name: Deploy ACL
+      - name: deploy acl
         if: github.event_name == 'push'
         id: deploy-acl
         uses: tailscale/gitops-acl-action@v1
@@ -27,7 +27,7 @@ jobs:
           api-key: ${{ secrets.TS_API_KEY }}
           tailnet: ${{ secrets.TS_TAILNET }}
           action: apply
-      - name: Test ACL
+      - name: test acl
         if: github.event_name == 'pull_request'
         id: test-acl
         uses: tailscale/gitops-acl-action@v1
