@@ -1,0 +1,16 @@
+services:
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:10.3.5
+    restart: unless-stopped
+    labels:
+      tsdproxy.enable: true
+    ports:
+      - 3000
+    volumes:
+      - grafana:/var/lib/grafana
+    networks:
+      - default
+
+volumes:
+  grafana:
