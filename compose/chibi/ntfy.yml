@@ -1,0 +1,20 @@
+services:
+  ntfy:
+    container_name: ntfy
+    image: binwiederhier/ntfy
+    restart: unless-stopped
+    command:
+      - serve
+    labels:
+      tsdproxy.enable: true
+    ports:
+      - 80
+    environment:
+      - TZ=America/Chicago
+    volumes:
+      - ntfy-cache:/var/cache/ntfy
+      - ntfy-config:/etc/ntfy
+
+volumes:
+  ntfy-cache:
+  ntfy-config:
