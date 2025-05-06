@@ -5,7 +5,6 @@
 		"arisu": "100.117.106.23",
 		"kokoro": "100.69.45.111",
 		"chibi": "100.101.224.25",
-		"uptime-kuma": "100.66.219.68",
 	},
 
 	// Declare static groups of users. Use autogroups for all users or users with a specific role.
@@ -36,11 +35,6 @@
 			"action": "accept",
 			"src": ["autogroup:shared"],
 			"dst": ["arisu:25565", "arisu:25566"]
-		},
-		{
-			"action": "accept",
-			"src": ["uptime-kuma"],
-			"dst": ["chibi:50000"]
 		}
 	],
 
