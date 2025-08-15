@@ -1,8 +1,8 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
 format = '''
-[╭─](text)$os[─](text)$directory[─](text)$git_branch$git_commit$git_status$fill$cmd_duration[─](text)$direnv[─](text)[\[](text)$username[@](blue)$hostname[\]](text)[─](text)$time
-[╰─](text) $character
+[╭─](text)$os[─](text)$directory[─](text)$git_branch$git_commit$git_status$fill$python$conda$direnv[─](text)[\[](text)$username[@](blue)$hostname[\]](text)[─](text)$time
+[╰─](text)$cmd_duration $character
 '''
 
 palette = "catppuccin_macchiato"
@@ -53,8 +53,9 @@ symbol = " "
 format = '[\[](text)[$symbol($version)]($style)[\]](text)'
 
 [cmd_duration]
-format = '[\[](text)[ $duration]($style)[\]](text)'
+format = '[\[](text)[ $duration]($style)[\]─](text)'
 style = 'red'
+min_time = 60_000
 
 [cobol]
 symbol = " "
@@ -62,7 +63,8 @@ format = '[\[](text)[$symbol($version)]($style)[\]](text)'
 
 [conda]
 symbol = "󱔎 "
-format = '[\[](text)[$symbol$environment]($style)[\]](text)'
+format = '[─\[](text)[$symbol$environment]($style)[\]](text)'
+style = "green"
 
 [container]
 symbol = "⬢ "
@@ -95,11 +97,11 @@ truncation_length = 10
 
 [direnv]
 disabled = false
-format = '([\[](text)[$loaded]($style)[\]](text))'
+format = '([─\[](text)[$loaded]($style)[\]](text))'
 loaded_msg = ""
 symbol = ""
 unloaded_msg = ""
-style = "green"
+style = "blue"
 
 [docker_context]
 symbol = " "
@@ -192,7 +194,7 @@ format = '[\[](text)[$symbol($version)]($style)[\]](text)'
 format = "[$hostname$ssh_symbol]($style)"
 ssh_only = false
 ssh_symbol = " "
-style = "blue"
+style = "lavender"
 
 [java]
 symbol = " "
@@ -343,7 +345,8 @@ format = '[\[](text)[$symbol($version)]($style)[\]](text)'
 
 [python]
 symbol = " "
-format = '[\[](text)[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)[\]](text)'
+format = '[─\[](text)[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)[\]](text)'
+style = "green"
 
 [quarto]
 symbol = "󰐗 "
@@ -411,8 +414,8 @@ symbol = " "
 [username]
 format = '[$user]($style)'
 show_always = true
-style_root = 'blue'
-style_user = 'blue'
+style_root = 'lavender'
+style_user = 'lavender'
 
 [vagrant]
 symbol = " "
@@ -526,8 +529,8 @@ teal = "#8bd5ca"
 sky = "#91d7e3"
 sapphire = "#7dc4e4"
 blue = "#8aadf4"
-mauve = "#c6a0f6"
 lavender = "#b7bdf8"
+mauve = "#c6a0f6"
 text = "#cad3f5"
 subtext1 = "#b8c0e0"
 subtext0 = "#a5adcb"
