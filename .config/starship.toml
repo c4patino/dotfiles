@@ -90,8 +90,8 @@ format = '[\[](text)[$symbol($version)]($style)[\]](text)'
 symbol = " "
 
 [directory]
-format = '[\[](text)[$path]($style)([$read_only]($read_only_style))[\]](text)'
-read_only = " 󰌾"
+format = '[\[](text)([$read_only]($read_only_style))[$path]($style)[\]](text)'
+read_only = "󰌾 "
 style = "peach"
 truncation_length = 10
 
