@@ -1,5 +1,13 @@
 {
     "$schema": "https://opencode.ai/config.json",
     "theme": "tokyonight",
-    "model": "github-copilot/gpt-4.1"
+    "model": "github-copilot/gpt-4.1",
+    "lsp": {
+        "clangd": {
+            "disabled": true,
+        },
+        "pyright": {
+            "disabled": true,
+        }
+    }
 }
