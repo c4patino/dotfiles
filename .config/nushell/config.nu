@@ -23,3 +23,31 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 source ~/.zoxide.nu
 
 source ~/.cache/carapace/init.nu
+
+# gitignore.io command
+def _gitignoreio_list [] {
+    http get https://www.toptal.com/developers/gitignore/api/list
+    | str replace -a "\n" ","
+    | split row ","
+    | str trim
+    | where {|x| $x != ""}
+}
+
+def "nu-complete gi" [] {
+    _gitignoreio_list
+}
+
+def gi [...args: string@"nu-complete gi"] {
+    if ($args | length) > 0 and $args.0 == "list" {
+        do { _gitignoreio_list }
+    }
+
+    let joined = ($args | str join ",")
+    http get $"https://www.toptal.com/developers/gitignore/api/($joined)"
+}
+
+# take command
+def take [path: string] {
+    mkdir $path
+    cd $path
+}
