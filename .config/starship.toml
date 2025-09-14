@@ -281,7 +281,7 @@ symbol = " "
 
 [os]
 disabled = false
-format = '([\[](text)[$symbol]($style)[\]](text))'
+format = '[\[](text)[$symbol]($style)[\]](text)'
 style = 'red'
 
 [os.symbols]
@@ -422,7 +422,7 @@ symbol = "󱁢 "
 
 [time]
 disabled = false
-format = '([\[](text)[$time]($style)[\]](text))'
+format = '[\[](text)[$time]($style)[\]](text)'
 style = "mauve"
 
 [typst]
