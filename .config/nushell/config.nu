@@ -38,11 +38,12 @@ def "nu-complete gi" [] {
 }
 
 def gi [...args: string@"nu-complete gi"] {
-    if ($args | length) > 0 and $args.0 == "list" {
-        do { _gitignoreio_list }
+    if ($args | where {|x| $x == "list"} | length) > 0 {
+      return (_gitignoreio_list)
     }
 
-    let joined = ($args | str join ",")
+    # Join templates with commas and fetch .gitignore
+    let joined = ($args | sort | str join ",")
     http get $"https://www.toptal.com/developers/gitignore/api/($joined)"
 }
 
