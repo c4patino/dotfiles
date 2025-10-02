@@ -52,3 +52,11 @@ def take [path: string] {
     mkdir $path
     cd $path
 }
+
+# secret copy command
+def sc [path: string] {
+    ["/run/secrets" $path]
+    | path join
+    | open
+    | wl-copy
+}
