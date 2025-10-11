@@ -1,13 +1,14 @@
 {
-    "$schema": "https://opencode.ai/config.json",
-    "theme": "tokyonight",
-    "model": "github-copilot/gpt-4.1",
-    "lsp": {
-        "clangd": {
-            "disabled": true,
-        },
-        "pyright": {
-            "disabled": true,
-        }
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "tokyonight",
+  "model": "github-copilot/gpt-4.1",
+  "small_model": "openai/gpt5-mini-2025-10-01",
+  "lsp": {
+    "clangd": {
+      "disabled": true
+    },
+    "pyright": {
+      "disabled": true
     }
+  }
 }
