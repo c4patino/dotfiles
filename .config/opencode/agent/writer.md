@@ -7,20 +7,12 @@ tools:
   patch: false
   webfetch: false
 permissions:
-  bash:
-    "rm -rf *": "ask"
-    "sudo *": "deny"
-    "chmod *": "ask"
-    "curl *": "ask"
-    "wget *": "ask"
-    "docker *": "ask"
-    "kubectl *": "ask"
   edit:
     "**/*.env*": "deny"
     "**/*.key": "deny"
     "**/*.secret": "deny"
-    "node_modules/**": "deny"
     ".git/**": "deny"
+    "node_modules/**": "deny"
 ---
 
 # Writer Agent

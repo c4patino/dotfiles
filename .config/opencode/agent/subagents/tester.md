@@ -4,8 +4,8 @@ mode: subagent
 model: github-copilot/gpt-4.1
 temperature: 0.1
 tools:
-  webfetch: false
   patch: false
+  webfetch: false
 permissions:
   bash:
     "rm -rf *": "ask"

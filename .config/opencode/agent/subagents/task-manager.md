@@ -5,15 +5,7 @@ model: github-copilot/gpt-4.1
 temperature: 0.1
 tools:
   bash: false
-permissions:
-  bash:
-    "*": "deny"
-  edit:
-    "**/*.env*": "deny"
-    "**/*.key": "deny"
-    "**/*.secret": "deny"
-    "node_modules/**": "deny"
-    ".git/**": "deny"
+  edit: false
 ---
 
 # Task Manager Subagent (@subagents/task-manager)

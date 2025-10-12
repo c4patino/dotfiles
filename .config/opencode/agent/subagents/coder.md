@@ -12,18 +12,9 @@ permissions:
     "**/*.env*": "deny"
     "**/*.key": "deny"
     "**/*.secret": "deny"
-    "node_modules/**": "deny"
     ".git/**": "deny"
+    "node_modules/**": "deny"
 ---
-tools:
-  read: true
-  edit: true
-  write: true
-  grep: true
-  glob: true
-  bash: true
-  patch: true
-  webfetch: false
 
 # Coder Agent (@coder-agent)
 
