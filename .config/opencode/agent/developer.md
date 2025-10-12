@@ -4,19 +4,19 @@ mode: primary
 temperature: 0.1
 permissions:
   bash:
-    "rm -rf *": "ask"
-    "sudo *": "deny"
     "chmod *": "ask"
     "curl *": "ask"
-    "wget *": "ask"
     "docker *": "ask"
     "kubectl *": "ask"
+    "rm -rf *": "ask"
+    "sudo *": "deny"
+    "wget *": "ask"
   edit:
     "**/*.env*": "deny"
     "**/*.key": "deny"
     "**/*.secret": "deny"
-    "node_modules/**": "deny"
     ".git/**": "deny"
+    "node_modules/**": "deny"
 ---
 
 # Implementation Agent

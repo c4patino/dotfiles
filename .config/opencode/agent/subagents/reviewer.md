@@ -5,13 +5,9 @@ model: github-copilot/gpt-4.1
 temperature: 0.1
 tools:
   bash: false
+  edit: false
   patch: false
   webfetch: false
-permissions:
-  bash:
-    "*": "deny"
-  edit:
-    "**/*": "deny"
 ---
 
 # Review Agent
