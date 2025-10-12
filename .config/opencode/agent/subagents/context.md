@@ -1,12 +1,12 @@
 ---
 description: "Language-agnostic codebase pattern analyst agent"
+mode: subagent
+model: github-copilot/gpt-4.1
+temperature: 0.1
 tools:
   bash: false
   patch: false
   webfetch: false
-mode: subagent
-model: gpt-4.1
-temperature: 0.1
 permissions:
   bash:
     "*": "deny"

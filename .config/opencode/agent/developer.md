@@ -1,7 +1,6 @@
 ---
 description: "Implementation agent for modular and functional development in any language"
 mode: primary
-model: gpt-4.1
 temperature: 0.1
 permissions:
   bash:
