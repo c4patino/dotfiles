@@ -5,4 +5,10 @@ snippet:
     enable: true
   exec_replace:
     enable: true
-strict_front_matter_parsing: false
+options:
+  auto_render_languages:
+    - d2
+    - mermaid
+    - latex
+  command_prefix: "cmd:"
+  strict_front_matter_parsing: false
