@@ -1,7 +1,8 @@
 defaults:
-  theme: catpuccin-macchiato
+  theme: catppuccin-macchiato
 snippet:
   exec:
     enable: true
   exec_replace:
     enable: true
+strict_front_matter_parsing: false
