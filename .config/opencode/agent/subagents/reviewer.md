@@ -1,7 +1,7 @@
 ---
 description: "Comprehensive code review, security, and quality assurance subagent"
 mode: subagent
-model: gpt-4.1
+model: github-copilot/gpt-4.1
 temperature: 0.1
 tools:
   bash: false

@@ -1,7 +1,6 @@
 ---
 description: "Writer agent for Markdown and LaTeX documents"
 mode: primary
-model: gpt-4.1
 temperature: 0.1
 tools:
   bash: false

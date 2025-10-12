@@ -1,7 +1,7 @@
 ---
 description: "Research subagent for information gathering and summarization"
 mode: subagent
-model: gpt-4.1
+model: github-copilot/gpt-4.1
 temperature: 0.1
 tools:
   write: false
@@ -23,15 +23,6 @@ permissions:
     "node_modules/**": "deny"
     ".git/**": "deny"
 ---
-tools:
-  read: true
-  edit: true
-  write: false
-  grep: true
-  glob: true
-  bash: false
-  patch: false
-  webfetch: true
 
 # Research Subagent (@research)
 
