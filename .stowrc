@@ -3,3 +3,4 @@
 --ignore='^slurm$'
 --ignore='^tsdproxy$'
 --ignore='^vimix$'
+--ignore='^httpd$'
