@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>401 - Unauthorized</title>
+    <style>
+      :root {
+        --bg: #1a1b26;
+        --fg: #c0caf5;
+        --accent: #7aa2f7;
+        --secondary: #bb9af7;
+        --error: #f7768e;
+        --muted: #565f89;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bg);
+        color: var(--fg);
+        font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        font-size: 8rem;
+        margin: 0;
+        color: var(--error);
+        font-weight: 700;
+      }
+      h2 {
+        margin: 0.5rem 0 1rem;
+        font-weight: 400;
+        color: var(--secondary);
+      }
+      p {
+        color: var(--muted);
+        margin-bottom: 2rem;
+      }
+      footer {
+        position: absolute;
+        bottom: 1rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .button-link {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        padding: 0.6rem 1.2rem;
+        transition: all 0.2s ease-in-out;
+      }
+      .button-link:hover {
+        background-color: var(--accent);
+        color: var(--bg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>401</h1>
+    <h2>Unauthorized</h2>
+    <p>You need to log in to access this neon alley.</p>
+    <a class="button-link" href="javascript:history.back()">Go Back</a>
+    <footer><a href="https://cpatino.com" target="_blank" rel="noopener">@cpatino</a></footer>
+  </body>
+</html>
