@@ -11,26 +11,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5.0.0
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            policy.hujson
       - name: fetch version cache
-        uses: actions/cache@v4
+        uses: actions/cache@v4.3.0
         with:
           path: ./version-cache.json
           key: version-cache.json-${{ github.run_id }}
           restore-keys: |
             version-cache.json-
       - name: deploy acl
-        if: github.event_name == 'push'
+        if: forgejo.event_name == 'push'
         id: deploy-acl
-        uses: tailscale/gitops-acl-action@v1
+        uses: https://github.com/tailscale/gitops-acl-action@v1.3.1
         with:
           api-key: ${{ secrets.TS_API_KEY }}
           tailnet: ${{ secrets.TS_TAILNET }}
           action: apply
       - name: test acl
-        if: github.event_name == 'pull_request'
+        if: forgejo.event_name == 'pull_request'
         id: test-acl
-        uses: tailscale/gitops-acl-action@v1
+        uses: https://github.com/tailscale/gitops-acl-action@v1.3.1
         with:
           api-key: ${{ secrets.TS_API_KEY }}
           tailnet: ${{ secrets.TS_TAILNET }}
