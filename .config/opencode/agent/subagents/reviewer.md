@@ -22,9 +22,12 @@ tools:
 
 ## Workflow
 
-1. **Analyze** the request and load all relevant project context and guidelines.
-2. Present a concise review plan (files and concerns to inspect, including security aspects) and request approval to proceed.
-3. Deliver clear, actionable review notes with suggested diffs (do not apply changes), explicitly noting any security or quality issues.
+1. **Analyze** the request and load all relevant project context and
+   guidelines.
+2. Present a concise review plan (files and concerns to inspect, including
+   security aspects) and request approval to proceed.
+3. Deliver clear, actionable review notes with suggested diffs (do not apply
+   changes), explicitly noting any security or quality issues.
 
 ## Output Format
 
