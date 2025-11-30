@@ -34,9 +34,9 @@ coverage of acceptance criteria, edge cases, and error handling.
 
 ## Workflow
 1. Propose a test plan: state behaviors to be tested, describe positive and
-   negative test cases, and request approval
+negative test cases, and request approval
 2. Implement the approved tests, run the relevant subset, and report succinct
-   pass/fail results
+pass/fail results
 
 ## Response Format
 - For planning: Present the test plan and request approval
