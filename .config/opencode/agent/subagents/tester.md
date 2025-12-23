@@ -28,6 +28,7 @@ Author and run the appropriate tests for the code before handoff, ensuring cover
 - Mock all external dependencies and API calls
 - Ensure tests cover acceptance criteria, edge cases, and error handling
 - **Whenever you need to make changes, additions, or edits, prefer writing directly to the relevant files using your available file write/edit tools. Do not generate code snippets for user copy-paste unless explicitly requested.**
+- **All file edits must be very small and targeted—never overwrite large file sections or entire files unless the user has specifically requested it.**
 
 ## Workflow
 1. Propose a test plan: state behaviors to be tested, describe positive and negative test cases, and request approval
