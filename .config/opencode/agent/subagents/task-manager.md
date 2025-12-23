@@ -5,7 +5,12 @@ model: github-copilot/gpt-4.1
 temperature: 0.1
 tools:
   bash: false
-  edit: false
+permissions:
+  edit:
+    "tasks/**": "allow"
+    "tasks/**/*.md": "allow"
+    "index.md": "allow"
+    "**/*": "deny"
 ---
 
 # Task Manager Subagent (@subagents/task-manager)

@@ -7,6 +7,7 @@ tools:
   bash: false
   patch: false
   write: false
+  edit: false
 permissions:
   bash:
     "chmod *": "ask"
@@ -16,12 +17,6 @@ permissions:
     "rm -rf *": "ask"
     "sudo *": "deny"
     "wget *": "ask"
-  edit:
-    "**/*.env*": "deny"
-    "**/*.key": "deny"
-    "**/*.secret": "deny"
-    ".git/**": "deny"
-    "node_modules/**": "deny"
 ---
 
 # Research Subagent (@research)
