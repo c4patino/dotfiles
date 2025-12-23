@@ -5,11 +5,10 @@ model: github-copilot/gpt-4.1
 temperature: 0.1
 tools:
   webfetch: false
+  edit: false
 permissions:
   bash:
     "*": "allow"
-  edit:
-    "**/*": "deny"
 ---
 
 # Build Agent (@build)
