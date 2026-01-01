@@ -9,6 +9,9 @@
     },
     "pyright": {
       "disabled": true
+    },
+    "texlab": {
+      "disabled": true
     }
   }
 }
