@@ -1,7 +1,7 @@
 ---
 description: "Build and validation agent"
 mode: subagent
-model: github-copilot/gpt-4.1
+model: opencode/minimax-m2.1-free
 temperature: 0.1
 tools:
   webfetch: false

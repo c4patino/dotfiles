@@ -1,7 +1,7 @@
 ---
 description: "Universal code documentation subagent: inserts/updates doc comments for functions, methods, and modules in any language."
 mode: subagent
-model: github-copilot/gpt-4.1
+model: opencode/minimax-m2.1-free
 temperature: 0.2
 tools:
   bash: false
