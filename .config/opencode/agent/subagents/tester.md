@@ -1,7 +1,7 @@
 ---
 description: "Test authoring and TDD agent"
 mode: subagent
-model: github-copilot/gpt-4.1
+model: opencode/minimax-m2.1-free
 temperature: 0.1
 tools:
   patch: false
