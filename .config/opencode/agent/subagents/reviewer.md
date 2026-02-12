@@ -1,7 +1,7 @@
 ---
 description: "Comprehensive code review, security, and quality assurance subagent"
 mode: subagent
-model: opencode/minimax-m2.1-free
+model: opencode/minimax-m2.5-free
 temperature: 0.1
 tools:
   bash: false

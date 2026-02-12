@@ -1,7 +1,7 @@
 ---
 description: "Build and validation agent"
 mode: subagent
-model: opencode/minimax-m2.1-free
+model: opencode/minimax-m2.5-free
 temperature: 0.1
 tools:
   webfetch: false
