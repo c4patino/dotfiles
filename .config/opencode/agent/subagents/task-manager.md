@@ -1,7 +1,7 @@
 ---
 description: "Breaks down complex features into small, verifiable subtasks"
 mode: subagent
-model: opencode/minimax-m2.1-free
+model: opencode/minimax-m2.5-free
 temperature: 0.1
 tools:
   bash: false

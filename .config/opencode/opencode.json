@@ -1,7 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "theme": "tokyonight",
-  "model": "opencode/minimax-m2.1-free",
+  "model": "opencode/minimax-m2.5-free",
   "lsp": {
     "clangd": {
       "disabled": true
