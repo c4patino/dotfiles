@@ -360,7 +360,7 @@ format = '([\[](text)[$symbol($version)]($style)[\]](text))'
 symbol = " "
 
 [python]
-format = '([─\[](text)[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)[\]](text))'
+format = '([\[](text)[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)[\]](text))'
 style = "green"
 symbol = " "
 
