@@ -3,9 +3,8 @@ description: "Breaks down complex features into small, verifiable subtasks"
 mode: subagent
 model: opencode/minimax-m2.5-free
 temperature: 0.1
-tools:
-  bash: false
-permissions:
+permission:
+  bash: deny
   edit:
     "tasks/**": "allow"
     "tasks/**/*.md": "allow"

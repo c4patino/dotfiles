@@ -3,17 +3,18 @@ description: "Executes coding subtasks in sequence, ensuring completion as speci
 mode: subagent
 model: opencode/minimax-m2.5-free
 temperature: 0.1
-tools:
-  webfetch: false
-permissions:
-  bash:
-    "*": "deny"
+permission:
+  bash: deny
   edit:
+    "*": "allow"
     "**/*.env*": "deny"
     "**/*.key": "deny"
     "**/*.secret": "deny"
     ".git/**": "deny"
+    ".venv/**": "deny"
+    "__pycache__/**": "deny"
     "node_modules/**": "deny"
+  webfetch: deny
 ---
 
 # Coder Agent

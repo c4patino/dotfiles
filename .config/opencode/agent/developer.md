@@ -2,8 +2,9 @@
 description: "Implementation agent for modular and functional development in any language"
 mode: primary
 temperature: 0.1
-permissions:
+permission:
   bash:
+    "*": "allow"
     "chmod *": "ask"
     "curl *": "ask"
     "docker *": "ask"
@@ -17,6 +18,8 @@ permissions:
     "**/*.key": "deny"
     "**/*.secret": "deny"
     ".git/**": "deny"
+    ".venv/**": "deny"
+    "__pycache__/**": "deny"
     "node_modules/**": "deny"
 ---
 

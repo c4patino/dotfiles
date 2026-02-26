@@ -3,12 +3,18 @@ description: "Build and validation agent"
 mode: subagent
 model: opencode/minimax-m2.5-free
 temperature: 0.1
-tools:
-  webfetch: false
-  edit: false
-permissions:
+permission:
   bash:
     "*": "allow"
+    "chmod *": "ask"
+    "curl *": "ask"
+    "docker *": "ask"
+    "kubectl *": "ask"
+    "rm -rf *": "ask"
+    "sudo *": "deny"
+    "wget *": "ask"
+  edit: deny
+  webfetch: deny
 ---
 
 # Build Agent

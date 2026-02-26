@@ -3,17 +3,27 @@ description: "Test authoring and TDD agent"
 mode: subagent
 model: opencode/minimax-m2.5-free
 temperature: 0.1
-tools:
-  patch: false
-  webfetch: false
-permissions:
+permission:
   bash:
+    "*": "allow"
+    "chmod *": "ask"
+    "curl *": "ask"
+    "docker *": "ask"
+    "kubectl *": "ask"
     "rm -rf *": "ask"
     "sudo *": "deny"
+    "wget *": "ask"
   edit:
+    "*": "allow"
     "**/*.env*": "deny"
     "**/*.key": "deny"
     "**/*.secret": "deny"
+    ".git/**": "deny"
+    ".venv/**": "deny"
+    "__pycache__/**": "deny"
+    "node_modules/**": "deny"
+  patch: deny
+  webfetch: deny
 ---
 
 # Tester Agent
