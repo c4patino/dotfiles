@@ -12,6 +12,7 @@ permissions:
     "sudo *": "deny"
     "wget *": "ask"
   edit:
+    "*": "allow"
     "**/*.env*": "deny"
     "**/*.key": "deny"
     "**/*.secret": "deny"
