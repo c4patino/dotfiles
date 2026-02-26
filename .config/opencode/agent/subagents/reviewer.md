@@ -3,11 +3,11 @@ description: "Comprehensive code review, security, and quality assurance subagen
 mode: subagent
 model: opencode/minimax-m2.5-free
 temperature: 0.1
-tools:
-  bash: false
-  edit: false
-  patch: false
-  webfetch: false
+permission:
+  bash: deny
+  edit: deny
+  patch: deny
+  webfetch: deny
 ---
 
 # Reviewer Agent

@@ -3,14 +3,19 @@ description: "Universal code documentation subagent: inserts/updates doc comment
 mode: subagent
 model: opencode/minimax-m2.5-free
 temperature: 0.2
-tools:
-  bash: false
-  patch: false
-  webfetch: false
-permissions:
-  "**/*.env*": "deny"
-  "**/*.key": "deny"
-  "**/*.secret": "deny"
+permission:
+  bash: deny
+  edit:
+    "*": "allow"
+    "**/*.env*": "deny"
+    "**/*.key": "deny"
+    "**/*.secret": "deny"
+    ".git/**": "deny"
+    ".venv/**": "deny"
+    "__pycache__/**": "deny"
+    "node_modules/**": "deny"
+  patch: deny
+  webfetch: deny
 ---
 
 # Documentation Agent
