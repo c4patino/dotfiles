@@ -2,18 +2,19 @@
 description: "Writer agent for Markdown and LaTeX documents"
 mode: primary
 temperature: 0.1
-tools:
-  bash: false
-  patch: false
-  webfetch: false
-permissions:
+permission:
+  bash: deny
   edit:
     "*": "allow"
     "**/*.env*": "deny"
     "**/*.key": "deny"
     "**/*.secret": "deny"
     ".git/**": "deny"
+    ".venv/**": "deny"
+    "__pycache__/**": "deny"
     "node_modules/**": "deny"
+  patch: deny
+  webfetch: deny
 ---
 
 # Writer Agent

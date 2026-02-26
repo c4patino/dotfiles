@@ -3,13 +3,9 @@ description: "Research subagent for information gathering and summarization"
 mode: subagent
 model: opencode/minimax-m2.5-free
 temperature: 0.1
-tools:
-  bash: false
-  patch: false
-  write: false
-  edit: false
-permissions:
+permission:
   bash:
+    "*": "allow"
     "chmod *": "ask"
     "curl *": "ask"
     "docker *": "ask"
@@ -17,6 +13,9 @@ permissions:
     "rm -rf *": "ask"
     "sudo *": "deny"
     "wget *": "ask"
+  edit: deny
+  patch: deny
+  write: deny
 ---
 
 # Research Agent

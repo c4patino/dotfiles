@@ -3,15 +3,11 @@ description: "Language-agnostic codebase pattern analyst agent"
 mode: subagent
 model: opencode/minimax-m2.5-free
 temperature: 0.1
-tools:
-  bash: false
-  patch: false
-  webfetch: false
-permissions:
-  bash:
-    "*": "deny"
-  edit:
-    "**/*": "deny"
+permission:
+  bash: deny
+  edit: deny
+  patch: deny
+  webfetch: deny
 ---
 
 # Context Agent
