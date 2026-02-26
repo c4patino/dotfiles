@@ -8,6 +8,7 @@ tools:
   webfetch: false
 permissions:
   edit:
+    "*": "allow"
     "**/*.env*": "deny"
     "**/*.key": "deny"
     "**/*.secret": "deny"
