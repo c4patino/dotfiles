@@ -1,7 +1,7 @@
 ---
 description: "Executes coding subtasks in sequence, ensuring completion as specified"
 mode: subagent
-model: opencode/minimax-m2.5-free
+model: github-copilot/gpt-5-mini
 temperature: 0.1
 permission:
   bash: deny
