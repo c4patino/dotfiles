@@ -1,7 +1,7 @@
 ---
 description: "Research subagent for information gathering and summarization"
 mode: subagent
-model: opencode/minimax-m2.5-free
+model: github-copilot/gpt-5-mini
 temperature: 0.1
 permission:
   bash:
