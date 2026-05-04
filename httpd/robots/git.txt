@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /user/login
+Disallow: /user/login*
+Disallow: /user/forgot_password
+Disallow: /user/forgot_password*
+Disallow: /miasma
+Disallow: /miasma/
