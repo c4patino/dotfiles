@@ -8,6 +8,8 @@ format = '''
 add_newline = false
 palette = "catppuccin_macchiato"
 
+command_timeout = 2500
+
 [aws]
 disabled = true
 format = '([\[](text)[$symbol($profile)(\($region\))(\[$duration[\]](text))]($style)\])'
