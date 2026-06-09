@@ -23,6 +23,13 @@ jobs:
           key: version-cache.json-${{ github.run_id }}
           restore-keys: |
             version-cache.json-
+      - name: test acl
+        id: test-acl
+        uses: https://github.com/tailscale/gitops-acl-action@v1.3.1
+        with:
+          api-key: ${{ secrets.TS_API_KEY }}
+          tailnet: ${{ secrets.TS_TAILNET }}
+          action: test
       - name: deploy acl
         if: forgejo.event_name == 'push'
         id: deploy-acl
@@ -31,11 +38,3 @@ jobs:
           api-key: ${{ secrets.TS_API_KEY }}
           tailnet: ${{ secrets.TS_TAILNET }}
           action: apply
-      - name: test acl
-        if: forgejo.event_name == 'pull_request'
-        id: test-acl
-        uses: https://github.com/tailscale/gitops-acl-action@v1.3.1
-        with:
-          api-key: ${{ secrets.TS_API_KEY }}
-          tailnet: ${{ secrets.TS_TAILNET }}
-          action: test
