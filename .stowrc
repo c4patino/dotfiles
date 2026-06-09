@@ -4,3 +4,4 @@
 --ignore='^vimix$'
 --ignore='^policy\.hujson$'
 --ignore='^xstow\.ini$'
+--ignore='^\.gitattributes$'
