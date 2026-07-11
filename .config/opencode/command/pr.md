@@ -27,7 +27,7 @@ When the user runs this command, create a pull request from the current branch.
 
 6. **Show and confirm** — Present the full PR body to the user for editing before creation.
 
-7. **Create** — Use `gh pr create` (GitHub) or `forgejo pr create` (Forgejo). Detect which tool is available. If neither is installed, print the markdown to stdout and suggest manual creation.
+7. **Create** — Use `gh pr create` (GitHub) or `fj pr create` (Forgejo). Detect which tool is available. If neither is installed, print the markdown to stdout and suggest manual creation.
 
 ## Behavior
 
