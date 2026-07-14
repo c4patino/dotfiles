@@ -13,5 +13,10 @@
     "texlab": {
       "disabled": true
     }
+  },
+  "permission": {
+    "external_directory": {
+      "~/openspec/**": "allow"
+    }
   }
 }
