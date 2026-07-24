@@ -16,7 +16,10 @@ When the user runs this command, create a pull request from the current branch.
    - Otherwise, use the remote's default branch.
    - Verify `origin/<base>` exists with `git rev-parse --verify origin/<base>`. If it does not, fetch or ask the user which base branch to use.
 
-3. **Find PR template** — Look for `PULL_REQUEST_TEMPLATE.md` in `.github/` or `.forgejo/` (case-insensitive). If found, read it. If not found, use a minimal default template.
+3. **Find PR template** — Check the conventional directories directly; do not use a recursive `**/` glob because it may skip dot-prefixed directories:
+   - First, directly read `.github/PULL_REQUEST_TEMPLATE.md`; then `.forgejo/PULL_REQUEST_TEMPLATE.md`.
+   - If neither exact path exists, list `.github/` and `.forgejo/` directly when present and locate a case-insensitive filename match there.
+   - Verify the selected path exists, then read it. Only use a minimal default template after both directories and their case variants have been checked.
 
 4. **Gather context** — Run `git log origin/<base>..HEAD --oneline` to collect recent commits and `git diff origin/<base>..HEAD --stat` for a file-level summary.
 
