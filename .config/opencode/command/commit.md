@@ -4,7 +4,7 @@ description: Create well-formatted commits with semantic conventional commit mes
 
 # Commit
 
-When the user runs this command, execute the following workflow:
+Create a commit from the current worktree changes.
 
 1. **Pre-commit validation**: Run the project's build/check/lint commands if they exist (e.g., `pnpm check`, `make`, `cargo check`, `go build`, etc.). If any fail, ask whether to proceed or fix first.
 

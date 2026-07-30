@@ -4,7 +4,9 @@ description: Create a pull request using the project's PULL_REQUEST_TEMPLATE.md
 
 # PR
 
-When the user runs this command, create a pull request from the current branch.
+Create a pull request from the current branch.
+
+**Input**: Optionally specify a base branch after `/pr` (for example, `/pr develop`).
 
 ## Workflow
 

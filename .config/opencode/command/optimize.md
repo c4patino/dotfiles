@@ -4,7 +4,9 @@ description: Analyze code for performance, security, and potential issues
 
 # Optimize
 
-When the user runs this command, analyze the specified files (or the current context if none given) for performance, security, and maintainability improvements.
+Analyze code for performance, security, reliability, and maintainability improvements.
+
+**Input**: Optionally specify files or directories after `/optimize`. If omitted, analyze the current context.
 
 ## Analysis Process
 

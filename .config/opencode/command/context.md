@@ -4,7 +4,9 @@ description: Analyze and understand the complete project context and structure
 
 # Context
 
-When the user runs this command, systematically analyze the project to understand its structure, purpose, stack, and current state. Use $ARGUMENTS to focus on specific aspects if provided.
+Analyze the project to understand its structure, purpose, technology stack, and current state.
+
+**Input**: Optionally specify a focus area after `/context`.
 
 ## Analysis Process
 
