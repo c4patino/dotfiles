@@ -4,7 +4,9 @@ description: Clean up code — remove debug artifacts, format, sort imports, fix
 
 # Clean
 
-When the user runs this command, clean the specified files or directories (or recently modified files if none given).
+Clean the specified files or directories.
+
+**Input**: Optionally specify files or directories after `/clean`. If omitted, clean recently modified files.
 
 ## Cleanup Pipeline
 
