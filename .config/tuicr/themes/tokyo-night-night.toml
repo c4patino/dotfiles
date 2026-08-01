@@ -1,0 +1,56 @@
+# Tokyo Night "night" theme for tuicr.
+# Colors drawn from folke/tokyonight.nvim "night" variant.
+# Diff backgrounds mirror the built-in tokyo-night-storm theme so the
+# syntax-highlighted diff gutters stay consistent with the palette.
+
+panel_bg = "#1a1b26"
+bg_highlight = "#292e42"
+fg_primary = "#c0caf5"
+fg_secondary = "#a9b1d6"
+fg_dim = "#545c7e"
+
+diff_add = "#9ece6a"
+diff_add_bg = "#20303b"
+diff_del = "#f7768e"
+diff_del_bg = "#37222c"
+diff_context = "#a9b1d6"
+diff_hunk_header = "#7aa2f7"
+expanded_context_fg = "#545c7e"
+
+syntax_add_bg = "#1c2a34"
+syntax_del_bg = "#2f1e26"
+# Optional syntax theme, resolved relative to this file.
+syntax_theme = "tokyonight_night.tmTheme"
+
+file_added = "#9ece6a"
+file_modified = "#e0af68"
+file_deleted = "#f7768e"
+file_renamed = "#bb9af7"
+
+reviewed = "#9ece6a"
+pending = "#e0af68"
+
+comment_note = "#7aa2f7"
+comment_suggestion = "#7dcfff"
+comment_issue = "#f7768e"
+comment_praise = "#9ece6a"
+
+border_focused = "#7aa2f7"
+border_unfocused = "#414868"
+status_bar_bg = "#16161e"
+cursor_color = "#ff9e64"
+cursor_line_bg = "#292e42"
+branch_name = "#7dcfff"
+help_indicator = "#565f89"
+
+message_info_fg = "#16161e"
+message_info_bg = "#7aa2f7"
+message_warning_fg = "#16161e"
+message_warning_bg = "#e0af68"
+message_error_fg = "#c0caf5"
+message_error_bg = "#f7768e"
+update_badge_fg = "#16161e"
+update_badge_bg = "#e0af68"
+
+mode_fg = "#16161e"
+mode_bg = "#7aa2f7"
