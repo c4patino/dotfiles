@@ -1,0 +1,135 @@
+defaults:
+  view: prs
+  preview:
+    open: false
+    width: 0.45
+
+  prsLimit: 20
+  issuesLimit: 20
+  notificationsLimit: 20
+
+  prApproveComment: ""
+
+  layout:
+    prs:
+      updatedAt:
+        width: 5
+      createdAt:
+        width: 5
+      repo:
+        width: 20
+      author:
+        width: 25
+      authorIcon:
+        hidden: false
+      assignees:
+        width: 20
+        hidden: true
+      base:
+        width: 15
+        hidden: true
+      lines:
+        width: 15
+    issues:
+      updatedAt:
+        width: 5
+      createdAt:
+        width: 5
+      repo:
+        width: 15
+      creator:
+        width: 25
+      creatorIcon:
+        hidden: false
+      assignees:
+        width: 20
+        hidden: true
+  refetchIntervalMinutes: 30
+
+repoPaths:
+  mutual-of-omaha/*: ~/Programming/moo/*
+  mutual-of-omaha/bf-bill-admin-server: ~/Programming/moo/bf-bill-admin/bf-bill-admin-server
+  mutual-of-omaha/bf-bill-admin-ui: ~/Programming/moo/bf-bill-admin/bf-bill-admin-ui
+  mutual-of-omaha/bf-compass-batch: ~/Programming/moo/bf-compass-batch/bf-compass-batch
+  mutual-of-omaha/bf-compass-patcher: ~/Programming/moo/bf-compass-patcher/bf-compass-patcher
+  mutual-of-omaha/bf-core-admin: ~/Programming/moo/bf-core-admin/bf-core-admin
+  oasys-mas/free-range-rust: ~/Programming/oasys/free-range-rust
+  c4patino/*: ~/Programming/personal/*
+  c4patino/oasys-experiments: ~/Programming/oasys/oasys-experiments
+  c4patino/lightsheet: ~/Programming/raman/lightsheet
+  c4patino/nixpkgs: ~/Programming/open/nixpkgs
+  c4patino/nixvim: ~/Programming/open/nixvim
+  c4patino/openspec: ~/Programming/open/openspec
+
+keybindings:
+  universal:
+  - key: g
+    name: lazygit
+    command: |
+      cd {{.RepoPath}}; lazygit
+  prs:
+  - key: C
+    name: code review
+    command: |
+      cd {{.RepoPath}}; tuicr pr {{.PrNumber}}
+
+prSections:
+- title: ready
+  filters: is:open author:@me -draft:true
+- title: drafts
+  filters: is:open draft:true
+- title: merged
+  filters: is:pr is:merged author:@me
+- title: to review
+  filters: is:open review-requested:@me -draft:true
+repo:
+  branchesRefetchIntervalSeconds: 30
+  prsRefetchIntervalSeconds: 60
+issuesSections:
+- title: my open
+  filters: is:open author:@me
+- title: assigned
+  filters: is:open assignee:@me
+- title: involved
+  filters: is:open involves:@me -author:@me
+notificationsSections:
+- title: all
+  filters: ''
+- title: created
+  filters: reason:author
+- title: participating
+  filters: reason:participating
+- title: mentioned
+  filters: reason:mention
+- title: review requested
+  filters: reason:review-requested
+- title: assigned
+  filters: reason:assign
+- title: subscribed
+  filters: reason:subscribed
+- title: team mentioned
+  filters: reason:team-mention
+
+pager:
+  diff: delta --side-by-side
+showAuthorIcons: true
+smartFilteringAtLaunch: true
+
+theme:
+  ui:
+    table:
+      compact: true
+  colors:
+    text:
+      primary: '#c0caf5'
+      secondary: '#a9b1d6'
+      inverted: '#1a1b26'
+      faint: '#565f89'
+      warning: '#f7768e'
+      success: '#9ece6a'
+    background:
+      selected: '#292e42'
+    border:
+      primary: '#7aa2f7'
+      secondary: '#565f89'
+      faint: '#16161e'

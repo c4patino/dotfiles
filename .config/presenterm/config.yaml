@@ -1,5 +1,5 @@
 defaults:
-  theme: catppuccin-macchiato
+  theme: tokyonight-night
 snippet:
   exec:
     enable: true
