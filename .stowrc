@@ -5,3 +5,4 @@
 --ignore='^policy\.hujson$'
 --ignore='^xstow\.ini$'
 --ignore='^\.gitattributes$'
+--ignore='windows'

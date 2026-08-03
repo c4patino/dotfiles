@@ -1,0 +1,43 @@
+{
+  "defaults": {
+    "mode": "copy"
+  },
+
+  "mappings": {
+    ".config/lazygit": "%LOCALAPPDATA%\\lazygit",
+    ".config/starship.toml": "~/.config/starship.toml",
+    ".config/presenterm": "%APPDATA%\\presenterm\\config",
+    ".config/nushell/windows": "%APPDATA%\\nushell",
+    ".config/gh-dash": "%APPDATA%\\gh-dash",
+    ".config/asciinema": "%APPDATA%\\asciinema",
+    ".config/bat": "%ProgramData%\\bat",
+    ".config/direnv": "%APPDATA%\\direnv\\config",
+    ".config/tuicr": "%APPDATA%\\tuicr",
+    ".config/yazi": "%APPDATA%\\yazi\\config",
+
+    ".ideavimrc": "%USERPROFILE%\\.ideavimrc"
+  },
+
+  "ignore": [
+    ".git",
+    ".DS_Store",
+    "README.md",
+    "LICENSE",
+
+    "deploy.json",
+    "deploy.ps1",
+    "xstow.ini",
+    ".gitattributes",
+    ".stowrc",
+
+    ".assets",
+    ".forgejo",
+    "httpd",
+    "slurm",
+    "tsdproxy",
+    "vimix",
+
+    ".p10k.zsh",
+    "policy.hujson"
+  ]
+}
