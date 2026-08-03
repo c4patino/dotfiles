@@ -18,17 +18,17 @@ Create a commit from the current worktree changes.
 
 ## Commit Type Reference
 
-| Type      | When to use                                           |
-|-----------|-------------------------------------------------------|
-| feat      | A new feature                                         |
-| fix       | A bug fix                                             |
-| docs      | Documentation changes                                 |
-| style     | Formatting, whitespace (no code logic change)         |
+| Type      | When to use                                             |
+| --------- | ------------------------------------------------------- |
+| feat      | A new feature                                           |
+| fix       | A bug fix                                               |
+| docs      | Documentation changes                                   |
+| style     | Formatting, whitespace (no code logic change)           |
 | refactor  | Code change that neither fixes a bug nor adds a feature |
-| perf      | Performance improvement                               |
-| test      | Adding or updating tests                              |
-| chore     | Maintenance, tooling, dependencies, config            |
-| wip       | Work in progress (not ready for review)               |
+| perf      | Performance improvement                                 |
+| test      | Adding or updating tests                                |
+| chore     | Maintenance, tooling, dependencies, config              |
+| wip       | Work in progress (not ready for review)                 |
 
 ## Behavior
 
