@@ -1,0 +1,419 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": {
+        "action": "newTab"
+      },
+      "id": "User.newTab.5DEADB41"
+    },
+    {
+      "command": "paste",
+      "id": "User.paste"
+    },
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "id": "User.copy.224984B4"
+    },
+    {
+      "command": {
+        "action": "moveTab",
+        "direction": "forward"
+      },
+      "id": "User.moveTab.793E2350"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "up"
+      },
+      "id": "User.moveFocus.6CD791B"
+    },
+    {
+      "command": "openTabRenamer",
+      "id": "User.openTabRenamer"
+    },
+    {
+      "command": {
+        "action": "prevTab"
+      },
+      "id": "User.prevTab.0"
+    },
+    {
+      "command": {
+        "action": "moveTab",
+        "direction": "backward"
+      },
+      "id": "User.moveTab.EF07D31B"
+    },
+    {
+      "command": {
+        "action": "nextTab"
+      },
+      "id": "User.nextTab.0"
+    },
+    {
+      "command": {
+        "action": "closeTab"
+      },
+      "id": "User.closeTab.0"
+    }
+  ],
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{df4aed98-8306-5fb0-8af1-98bb06a6123a}",
+  "keybindings": [
+    {
+      "id": "Terminal.MoveFocusLeft",
+      "keys": "ctrl+shift+h"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+4"
+    },
+    {
+      "id": "User.newTab.5DEADB41",
+      "keys": "ctrl+shift+t"
+    },
+    {
+      "id": null,
+      "keys": "alt+down"
+    },
+    {
+      "id": "User.moveFocus.6CD791B",
+      "keys": "ctrl+shift+k"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+tab"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+d"
+    },
+    {
+      "id": "User.newTab.886498BA",
+      "keys": "ctrl+t"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+3"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+plus"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+minus"
+    },
+    {
+      "id": "Terminal.MoveFocusDown",
+      "keys": "ctrl+shift+j"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+9"
+    },
+    {
+      "id": "Terminal.MoveFocusRight",
+      "keys": "ctrl+shift+l"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+y"
+    },
+    {
+      "id": null,
+      "keys": "shift+insert"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+minus"
+    },
+    {
+      "id": null,
+      "keys": "alt+right"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+numpad_minus"
+    },
+    {
+      "id": null,
+      "keys": "alt+space"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+plus"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+comma"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+numpad_plus"
+    },
+    {
+      "id": null,
+      "keys": "alt+left"
+    },
+    {
+      "id": null,
+      "keys": "enter"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+6"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+insert"
+    },
+    {
+      "id": null,
+      "keys": "alt+f4"
+    },
+    {
+      "id": null,
+      "keys": "alt+up"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+1"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+0"
+    },
+    {
+      "id": "User.moveTab.EF07D31B",
+      "keys": "ctrl+shift+comma"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+2"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+5"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+home"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+7"
+    },
+    {
+      "id": "User.openTabRenamer",
+      "keys": "ctrl+shift+r"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+8"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+7"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+4"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+n"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+down"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+tab"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+comma"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+space"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+pgup"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+pgdn"
+    },
+    {
+      "id": null,
+      "keys": "f11"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+numpad0"
+    },
+    {
+      "id": "User.moveTab.793E2350",
+      "keys": "ctrl+shift+period"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+m"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+left"
+    },
+    {
+      "id": "User.paste",
+      "keys": "ctrl+shift+v"
+    },
+    {
+      "id": "User.closeTab.0",
+      "keys": "ctrl+shift+w"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+5"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+right"
+    },
+    {
+      "id": "User.copy.224984B4",
+      "keys": "ctrl+shift+c"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+1"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+left"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+up"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+down"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+end"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+up"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+a"
+    },
+    {
+      "id": null,
+      "keys": "menu"
+    },
+    {
+      "id": null,
+      "keys": "win+sc(41)"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+2"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+3"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+6"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+8"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+9"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+p"
+    },
+    {
+      "id": null,
+      "keys": "alt+enter"
+    },
+    {
+      "id": "User.prevTab.0",
+      "keys": "ctrl+shift+left"
+    },
+    {
+      "id": "User.nextTab.0",
+      "keys": "ctrl+shift+right"
+    }
+  ],
+  "newTabMenu": [
+    {
+      "type": "remainingProfiles"
+    }
+  ],
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Tokyo Night",
+      "experimental.retroTerminalEffect": false,
+      "font": {
+        "builtinGlyphs": false,
+        "colorGlyphs": false,
+        "face": "MesloLGM Nerd Font Mono",
+        "size": 12
+      }
+    },
+    "list": []
+  },
+  "schemes": [
+    {
+      "background": "#1A1B26",
+      "black": "#15161E",
+      "blue": "#7AA2F7",
+      "brightBlack": "#414868",
+      "brightBlue": "#7AA2F7",
+      "brightCyan": "#7DCFFF",
+      "brightGreen": "#9ECE6A",
+      "brightPurple": "#9D7CD8",
+      "brightRed": "#F7768E",
+      "brightWhite": "#C0CAF5",
+      "brightYellow": "#E0AF68",
+      "cursorColor": "#C0CAF5",
+      "cyan": "#7DCFFF",
+      "foreground": "#C0CAF5",
+      "green": "#9ECE6A",
+      "name": "Tokyo Night",
+      "purple": "#BB9AF7",
+      "red": "#F7768E",
+      "selectionBackground": "#283457",
+      "white": "#A9B1D6",
+      "yellow": "#E0AF68"
+    }
+  ],
+  "themes": []
+}
