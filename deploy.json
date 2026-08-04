@@ -5,7 +5,7 @@
 
   "mappings": {
     ".config/lazygit": "%LOCALAPPDATA%\\lazygit",
-    ".config/starship.toml": "~/.config/starship.toml",
+    ".config/starship.toml": "~\\.config\\starship.toml",
     ".config/presenterm": "%APPDATA%\\presenterm\\config",
     ".config/nushell/windows": "%APPDATA%\\nushell",
     ".config/gh-dash": "%APPDATA%\\gh-dash",
@@ -14,6 +14,8 @@
     ".config/direnv": "%APPDATA%\\direnv\\config",
     ".config/tuicr": "%APPDATA%\\tuicr",
     ".config/yazi": "%APPDATA%\\yazi\\config",
+
+    "windows/powershell": "$PROFILE_DIR",
 
     ".ideavimrc": "%USERPROFILE%\\.ideavimrc"
   },
