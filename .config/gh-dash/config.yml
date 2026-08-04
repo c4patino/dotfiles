@@ -78,10 +78,10 @@ prSections:
   filters: is:open author:@me -draft:true
 - title: drafts
   filters: is:open draft:true
-- title: merged
-  filters: is:pr is:merged author:@me
 - title: to review
   filters: is:open review-requested:@me -draft:true
+- title: merged
+  filters: is:pr is:merged author:@me
 repo:
   branchesRefetchIntervalSeconds: 30
   prsRefetchIntervalSeconds: 60
