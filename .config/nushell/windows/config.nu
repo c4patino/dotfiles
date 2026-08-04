@@ -4,14 +4,6 @@ $env.config = {
   show_banner: false
 }
 
-$env.PATH = ($env.PATH 
-  | append $"($env.USERPROFILE)/AppData/Local/Programs/nvim-v0.12.2/bin"
-  | append $"($env.USERPROFILE)/AppData/Local/Programs/cmake-v4.3.2/bin"
-  | append $"($env.USERPROFILE)/AppData/Local/Programs/msys64/ucrt64/bin"
-  | append $"($env.USERPROFILE)/AppData/Local/Programs/jdk-25.0.3/bin"
-  | append $"($env.USERPROFILE)/AppData/Local/Programs/gradle-8.14.4/bin"
-)
-
 #===============================================================================
 #  plugins
 #===============================================================================
