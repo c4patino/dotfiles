@@ -24,9 +24,12 @@ $Ignore = @($config.ignore) |
 
 $Mappings = @{}
 
+$ProfileDir = Split-Path -Parent $PROFILE
+
 foreach ($property in $config.mappings.PSObject.Properties) {
     $value = $property.Value.Replace("~", $HOME)
     $value = [Environment]::ExpandEnvironmentVariables($value)
+    $value = $value.Replace('$PROFILE_DIR', $ProfileDir)
 
     $Mappings[$property.Name.Replace('/', '\')] = $value
 }

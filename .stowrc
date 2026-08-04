@@ -2,7 +2,7 @@
 --ignore='^slurm$'
 --ignore='^tsdproxy$'
 --ignore='^vimix$'
+--ignore='^windows$'
 --ignore='^policy\.hujson$'
 --ignore='^xstow\.ini$'
 --ignore='^\.gitattributes$'
---ignore='windows'
