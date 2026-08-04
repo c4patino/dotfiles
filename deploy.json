@@ -16,6 +16,7 @@
     ".config/yazi": "%APPDATA%\\yazi\\config",
 
     "windows/powershell": "$PROFILE_DIR",
+    "windows/terminal": "%LOCALAPPDATA%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState",
 
     ".ideavimrc": "%USERPROFILE%\\.ideavimrc"
   },
