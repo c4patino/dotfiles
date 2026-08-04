@@ -12,7 +12,7 @@ Create a commit from the current worktree changes.
 
 3. **Analyze the diff**: Run `git diff --cached` and determine the primary change type (feat, fix, docs, chore, refactor, perf, test, style).
 
-4. **Generate commit message**: Format as `<type>: <description>` in imperative mood. Keep under 72 characters. Show the proposed message for confirmation.
+4. **Generate commit message**: Format as `<type>: <description>` in imperative mood. Make the description specific enough to be as close to 80 total characters as possible - never exceed 80, but don't be too terse either. Show the proposed message for confirmation.
 
 5. **Execute**: Run `git commit -m "<message>"` (no push). Display the commit hash and summary.
 
@@ -34,4 +34,4 @@ Create a commit from the current worktree changes.
 
 - If validation fails, give the option to proceed or fix first.
 - Auto-stage all changes if nothing is staged; respect existing staged files otherwise.
-- Only commit — never push.
+- Only commit - never push.
