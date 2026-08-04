@@ -10,13 +10,13 @@ Analyze the project to understand its structure, purpose, technology stack, and 
 
 ## Analysis Process
 
-1. **Project discovery** — Read README, examine build configs (package.json, Cargo.toml, pyproject.toml, Gemfile, Makefile, CMakeLists.txt, etc.), and check for documentation files.
+1. **Project discovery**: Read README, examine build configs (package.json, Cargo.toml, pyproject.toml, Gemfile, Makefile, CMakeLists.txt, etc.), and check for documentation files.
 
-2. **Codebase structure** — Run `git ls-files | head -60` to see the file layout. Identify main directories and their purposes. Examine key config files.
+2. **Codebase structure**: Run `git ls-files | head -60` to see the file layout. Identify main directories and their purposes. Examine key config files.
 
-3. **Tech stack detection** — Identify languages, frameworks, build tools, package manager, containerization (Dockerfile, compose.yml), and CI/CD setup.
+3. **Tech stack detection**: Identify languages, frameworks, build tools, package manager, containerization (Dockerfile, compose.yml), and CI/CD setup.
 
-4. **Current state** — Check `git status`, `git log --oneline -10`, and scan for TODO items, test coverage patterns.
+4. **Current state**: Check `git status`, `git log --oneline -10`, and scan for TODO items, test coverage patterns.
 
 ## Report
 
