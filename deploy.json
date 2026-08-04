@@ -13,7 +13,6 @@
     ".config/bat": "%ProgramData%\\bat",
     ".config/direnv": "%APPDATA%\\direnv\\config",
     ".config/tuicr": "%APPDATA%\\tuicr",
-    ".config/yazi": "%APPDATA%\\yazi\\config",
 
     "windows/powershell": "$PROFILE_DIR",
     "windows/terminal": "%LOCALAPPDATA%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState",
@@ -41,6 +40,9 @@
     "vimix",
 
     ".p10k.zsh",
-    "policy.hujson"
+    "policy.hujson",
+
+    ".config/nushell/config.nu",
+    ".config/nushell/env.nu"
   ]
 }
