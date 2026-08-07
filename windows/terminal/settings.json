@@ -61,6 +61,10 @@
         "action": "closeTab"
       },
       "id": "User.closeTab.0"
+    },
+    {
+      "command": "closeWindow",
+      "id": "User.closeWindow"
     }
   ],
   "copyFormatting": "none",
@@ -180,7 +184,7 @@
       "keys": "ctrl+insert"
     },
     {
-      "id": null,
+      "id": "User.closeWindow",
       "keys": "alt+f4"
     },
     {
