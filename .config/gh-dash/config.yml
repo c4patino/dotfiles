@@ -77,9 +77,9 @@ prSections:
 - title: ready
   filters: is:open author:@me -draft:true
 - title: drafts
-  filters: is:open draft:true
+  filters: is:open author:@me draft:true
 - title: to review
-  filters: is:open -draft:true -author:@me
+  filters: is:open -author:@me -draft:true
 - title: merged
   filters: is:pr is:merged author:@me
 repo:
