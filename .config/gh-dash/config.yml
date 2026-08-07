@@ -79,7 +79,7 @@ prSections:
 - title: drafts
   filters: is:open draft:true
 - title: to review
-  filters: is:open review-requested:@me -draft:true
+  filters: is:open -draft:true -author:@me
 - title: merged
   filters: is:pr is:merged author:@me
 repo:
