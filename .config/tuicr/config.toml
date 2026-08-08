@@ -1,2 +1,14 @@
 theme = "tokyo-night-night"
+no_update_check = true
+
 leader = " "
+comment_vim = true
+comment_tab_width = 2
+relative_line_numbers = true
+cursor_line = true
+scroll_offset = 8
+
+diff_view = "side-by-side"
+
+[forge]
+comment_type_prefix = false
