@@ -16,7 +16,8 @@
   },
   "permission": {
     "external_directory": {
-      "~/openspec/**": "allow"
+      "~/openspec/**": "allow",
+      "/tmp": "allow"
     }
   }
 }
