@@ -53,13 +53,9 @@ repoPaths:
   mutual-of-omaha/bf-compass-batch: ~/Programming/komorebi/bf-compass-batch/bf-compass-batch
   mutual-of-omaha/bf-compass-patcher: ~/Programming/komorebi/bf-compass-patcher/bf-compass-patcher
   mutual-of-omaha/bf-core-admin: ~/Programming/komorebi/bf-core-admin/bf-core-admin
-  oasys-mas/free-range-rust: ~/Programming/oasys/free-range-rust
   c4patino/*: ~/Programming/personal/*
-  c4patino/oasys-experiments: ~/Programming/oasys/oasys-experiments
-  c4patino/lightsheet: ~/Programming/raman/lightsheet
   c4patino/nixpkgs: ~/Programming/open/nixpkgs
   c4patino/nixvim: ~/Programming/open/nixvim
-  c4patino/openspec: ~/Programming/open/openspec
 
 keybindings:
   universal:
