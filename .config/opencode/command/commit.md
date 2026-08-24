@@ -1,20 +1,22 @@
 ---
-description: Create well-formatted commits with semantic conventional commit messages
+description: Commit staged changes, or stage all changes when nothing is staged
 ---
 
 # Commit
 
 Create a commit from the current worktree changes.
 
-1. **Pre-commit validation**: Run the project's build/check/lint commands if they exist (e.g., `pnpm check`, `make`, `cargo check`, `go build`, etc.). If any fail, ask whether to proceed or fix first.
+**Input**: Optionally specify the commit type after `/commit` (for example, `/commit fix`).
 
-2. **Stage changes**: Run `git status --porcelain`. If no files are staged, run `git add .` to stage all modified files. If files are already staged, commit only those.
+## Workflow
 
-3. **Analyze the diff**: Run `git diff --cached` and determine the primary change type (feat, fix, docs, chore, refactor, perf, test, style).
+1. **Stage changes**: Run `git diff --cached --quiet`. If no files are staged, run `git add .` to stage all modified and untracked files. If files are already staged, commit only those.
 
-4. **Generate commit message**: Format as `<type>: <description>` in imperative mood. Make the description specific enough to be as close to 80 total characters as possible - never exceed 80, but don't be too terse either. Show the proposed message for confirmation.
+2. **Analyze staged changes**: Run `git diff --cached` to inspect only the staged files. Determine the primary change type from the diff unless the user supplied a type.
 
-5. **Execute**: Run `git commit -m "<message>"` (no push). Display the commit hash and summary.
+3. **Generate and commit**: Format the message as `<type>: <description>` in imperative mood. Keep it specific and under 80 characters. Run `git commit -m "<message>"` immediately without asking for confirmation.
+
+4. **Report**: Display the commit hash and summary. Do not push.
 
 ## Commit Type Reference
 
@@ -32,6 +34,8 @@ Create a commit from the current worktree changes.
 
 ## Behavior
 
-- If validation fails, give the option to proceed or fix first.
+- Do not run build, check, lint, or test commands.
 - Auto-stage all changes if nothing is staged; respect existing staged files otherwise.
+- If the user supplies a type after `/commit`, use it as the commit type rather than inferring one from the diff.
+- Generate the commit message and commit without confirmation.
 - Only commit - never push.
