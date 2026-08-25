@@ -213,11 +213,7 @@ $Targets = @()
 
 if ($All) {
 
-    $Targets += Get-ChildItem $RepoRoot |
-        Where-Object {
-            $_.Name -ne ".git"
-        } |
-        Select-Object -ExpandProperty Name
+    $Targets += $Mappings.Keys
 } else {
 
     foreach ($path in $Paths) {
