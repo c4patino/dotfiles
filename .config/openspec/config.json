@@ -19,5 +19,6 @@
     "bulk-archive",
     "verify",
     "onboard"
-  ]
+  ],
+  "completionTipSeen": true
 }
