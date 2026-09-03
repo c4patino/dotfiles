@@ -3,21 +3,14 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "actions": [
     {
-      "command": {
-        "action": "newTab"
-      },
-      "id": "User.newTab.5DEADB41"
-    },
-    {
       "command": "paste",
       "id": "User.paste"
     },
     {
       "command": {
-        "action": "copy",
-        "singleLine": false
+        "action": "newTab"
       },
-      "id": "User.copy.224984B4"
+      "id": "User.newTab.5DEADB41"
     },
     {
       "command": {
@@ -25,6 +18,13 @@
         "direction": "forward"
       },
       "id": "User.moveTab.793E2350"
+    },
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "id": "User.copy.224984B4"
     },
     {
       "command": {
@@ -39,16 +39,16 @@
     },
     {
       "command": {
-        "action": "prevTab"
-      },
-      "id": "User.prevTab.0"
-    },
-    {
-      "command": {
         "action": "moveTab",
         "direction": "backward"
       },
       "id": "User.moveTab.EF07D31B"
+    },
+    {
+      "command": {
+        "action": "prevTab"
+      },
+      "id": "User.prevTab.0"
     },
     {
       "command": {
@@ -65,6 +65,10 @@
     {
       "command": "closeWindow",
       "id": "User.closeWindow"
+    },
+    {
+      "command": "toggleFullscreen",
+      "id": "User.toggleFullscreen"
     }
   ],
   "copyFormatting": "none",
@@ -72,20 +76,28 @@
   "defaultProfile": "{df4aed98-8306-5fb0-8af1-98bb06a6123a}",
   "keybindings": [
     {
-      "id": "Terminal.MoveFocusLeft",
-      "keys": "ctrl+shift+h"
+      "id": "User.newTab.5DEADB41",
+      "keys": "ctrl+shift+t"
     },
     {
       "id": null,
       "keys": "ctrl+shift+4"
     },
     {
-      "id": "User.newTab.5DEADB41",
-      "keys": "ctrl+shift+t"
+      "id": null,
+      "keys": "alt+down"
+    },
+    {
+      "id": "Terminal.MoveFocusLeft",
+      "keys": "ctrl+shift+h"
+    },
+    {
+      "id": "User.newTab.886498BA",
+      "keys": "ctrl+t"
     },
     {
       "id": null,
-      "keys": "alt+down"
+      "keys": "ctrl+shift+d"
     },
     {
       "id": "User.moveFocus.6CD791B",
@@ -97,23 +109,15 @@
     },
     {
       "id": null,
-      "keys": "ctrl+shift+d"
-    },
-    {
-      "id": "User.newTab.886498BA",
-      "keys": "ctrl+t"
-    },
-    {
-      "id": null,
-      "keys": "ctrl+shift+3"
-    },
-    {
-      "id": null,
       "keys": "ctrl+plus"
     },
     {
       "id": null,
       "keys": "ctrl+minus"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+3"
     },
     {
       "id": "Terminal.MoveFocusDown",
@@ -129,11 +133,11 @@
     },
     {
       "id": null,
-      "keys": "ctrl+shift+y"
+      "keys": "shift+insert"
     },
     {
       "id": null,
-      "keys": "shift+insert"
+      "keys": "ctrl+shift+y"
     },
     {
       "id": null,
@@ -141,11 +145,11 @@
     },
     {
       "id": null,
-      "keys": "alt+right"
+      "keys": "ctrl+numpad_minus"
     },
     {
       "id": null,
-      "keys": "ctrl+numpad_minus"
+      "keys": "alt+right"
     },
     {
       "id": null,
@@ -157,11 +161,11 @@
     },
     {
       "id": null,
-      "keys": "ctrl+comma"
+      "keys": "ctrl+shift+f"
     },
     {
       "id": null,
-      "keys": "ctrl+shift+f"
+      "keys": "ctrl+comma"
     },
     {
       "id": null,
@@ -177,11 +181,11 @@
     },
     {
       "id": null,
-      "keys": "ctrl+shift+6"
+      "keys": "ctrl+insert"
     },
     {
       "id": null,
-      "keys": "ctrl+insert"
+      "keys": "ctrl+shift+6"
     },
     {
       "id": "User.closeWindow",
@@ -197,6 +201,14 @@
     },
     {
       "id": null,
+      "keys": "ctrl+shift+5"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+2"
+    },
+    {
+      "id": null,
       "keys": "ctrl+0"
     },
     {
@@ -205,19 +217,11 @@
     },
     {
       "id": null,
-      "keys": "ctrl+shift+2"
-    },
-    {
-      "id": null,
-      "keys": "ctrl+shift+5"
+      "keys": "ctrl+shift+7"
     },
     {
       "id": null,
       "keys": "ctrl+shift+home"
-    },
-    {
-      "id": null,
-      "keys": "ctrl+shift+7"
     },
     {
       "id": "User.openTabRenamer",
@@ -229,15 +233,15 @@
     },
     {
       "id": null,
+      "keys": "ctrl+shift+n"
+    },
+    {
+      "id": null,
       "keys": "ctrl+alt+7"
     },
     {
       "id": null,
       "keys": "ctrl+alt+4"
-    },
-    {
-      "id": null,
-      "keys": "ctrl+shift+n"
     },
     {
       "id": null,
@@ -257,23 +261,23 @@
     },
     {
       "id": null,
+      "keys": "ctrl+numpad0"
+    },
+    {
+      "id": "User.toggleFullscreen",
+      "keys": "f11"
+    },
+    {
+      "id": "User.moveTab.793E2350",
+      "keys": "ctrl+shift+period"
+    },
+    {
+      "id": null,
       "keys": "ctrl+shift+pgup"
     },
     {
       "id": null,
       "keys": "ctrl+shift+pgdn"
-    },
-    {
-      "id": null,
-      "keys": "f11"
-    },
-    {
-      "id": null,
-      "keys": "ctrl+numpad0"
-    },
-    {
-      "id": "User.moveTab.793E2350",
-      "keys": "ctrl+shift+period"
     },
     {
       "id": null,
@@ -293,10 +297,6 @@
     },
     {
       "id": null,
-      "keys": "ctrl+alt+5"
-    },
-    {
-      "id": null,
       "keys": "alt+shift+right"
     },
     {
@@ -305,11 +305,15 @@
     },
     {
       "id": null,
-      "keys": "ctrl+alt+1"
+      "keys": "ctrl+alt+5"
     },
     {
       "id": null,
       "keys": "alt+shift+left"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+alt+1"
     },
     {
       "id": null,
@@ -389,7 +393,7 @@
         "builtinGlyphs": false,
         "colorGlyphs": false,
         "face": "MesloLGM Nerd Font Mono",
-        "size": 12
+        "size": 14
       }
     },
     "list": []
