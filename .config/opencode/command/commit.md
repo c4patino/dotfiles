@@ -14,7 +14,7 @@ Create a commit from the current worktree changes.
 
 2. **Analyze staged changes**: Run `git diff --cached` to inspect only the staged files. Determine the primary change type from the diff unless the user supplied a type.
 
-3. **Generate and commit**: Format the message as `<type>: <description>` in imperative mood. Keep it specific and under 80 characters. Run `git commit -m "<message>"` immediately without asking for confirmation.
+3. **Generate and commit**: Format the message as `<type>: <description>` in imperative mood. Keep it specific and close to but not greater than 80 characters in length. Run `git commit -m "<message>"` immediately without asking for confirmation.
 
 4. **Report**: Display the commit hash and summary. Do not push.
 
