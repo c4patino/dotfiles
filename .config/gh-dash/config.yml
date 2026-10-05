@@ -47,12 +47,6 @@ defaults:
   refetchIntervalMinutes: 30
 
 repoPaths:
-  mutual-of-omaha/*: ~/Programming/komorebi/*
-  mutual-of-omaha/bf-bill-admin-server: ~/Programming/komorebi/bf-bill-admin/bf-bill-admin-server
-  mutual-of-omaha/bf-bill-admin-ui: ~/Programming/komorebi/bf-bill-admin/bf-bill-admin-ui
-  mutual-of-omaha/bf-compass-batch: ~/Programming/komorebi/bf-compass-batch/bf-compass-batch
-  mutual-of-omaha/bf-compass-patcher: ~/Programming/komorebi/bf-compass-patcher/bf-compass-patcher
-  mutual-of-omaha/bf-core-admin: ~/Programming/komorebi/bf-core-admin/bf-core-admin
   c4patino/*: ~/Programming/personal/*
   c4patino/nixpkgs: ~/Programming/open/nixpkgs
   c4patino/nixvim: ~/Programming/open/nixvim
