@@ -48,8 +48,6 @@ defaults:
 
 repoPaths:
   c4patino/*: ~/Programming/personal/*
-  c4patino/nixpkgs: ~/Programming/open/nixpkgs
-  c4patino/nixvim: ~/Programming/open/nixvim
 
 keybindings:
   universal:
