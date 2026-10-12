@@ -216,19 +216,6 @@ in
 ```
 :::
 
-```{=include=} sections
-option-declarations.section.md
-option-types.section.md
-option-def.section.md
-assertions.section.md
-meta-attributes.section.md
-importing-modules.section.md
-replace-modules.section.md
-freeform-modules.section.md
-settings-options.section.md
-state-revision.section.md
-```
-
 ---
 
 # Option Declarations {#sec-option-declarations}
@@ -2467,7 +2454,7 @@ file.
       https://nixos.org/manual/nixpkgs/unstable/#sec-contributing-markup
     ) file containing the module
     documentation. Its contents is automatically added to
-    [](#ch-configuration). Changes to a module documentation have to
+    [](#ch-services). Changes to a module documentation have to
     be checked to not break building the NixOS manual:
 
     ```ShellSession

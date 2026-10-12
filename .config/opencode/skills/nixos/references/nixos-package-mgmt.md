@@ -18,11 +18,6 @@ NixOS has two distinct styles of package management:
     `nix-env` command. This style allows mixing packages from different
     Nixpkgs versions. It's the only choice for non-root users.
 
-```{=include=} sections
-declarative-packages.section.md
-ad-hoc-packages.section.md
-```
-
 ---
 
 # Declarative Package Management {#sec-declarative-package-mgmt}
@@ -66,11 +61,6 @@ configuration, use `pkgs` prefix (variable).
 
 To "uninstall" a package, remove it from
 [](#opt-environment.systemPackages) and run `nixos-rebuild switch`.
-
-```{=include=} sections
-customizing-packages.section.md
-adding-custom-packages.section.md
-```
 
 ---
 
@@ -171,15 +161,14 @@ tree. For instance, here is how you specify a build of the
 {
   environment.systemPackages =
     let
-      my-hello =
-        with pkgs;
-        stdenv.mkDerivation rec {
-          name = "hello-2.8";
-          src = fetchurl {
-            url = "mirror://gnu/hello/${name}.tar.gz";
-            hash = "sha256-5rd/gffPfa761Kn1tl3myunD8TuM+66oy1O7XqVGDXM=";
-          };
+      my-hello = pkgs.stdenv.mkDerivation (finalAttrs: {
+        pname = "hello";
+        version = "2.8";
+        src = pkgs.fetchurl {
+          url = "mirror://gnu/hello/hello-${finalAttrs.version}.tar.gz";
+          hash = "sha256-5rd/gffPfa761Kn1tl3myunD8TuM+66oy1O7XqVGDXM=";
         };
+      });
     in
     [ my-hello ];
 }
@@ -189,27 +178,28 @@ Of course, you can also move the definition of `my-hello` into a
 separate Nix expression, e.g.
 
 ```nix
-{ environment.systemPackages = [ (import ./my-hello.nix) ]; }
+{ environment.systemPackages = [ (pkgs.callPackage ./my-hello.nix { }) ]; }
 ```
 
 where `my-hello.nix` contains:
 
 ```nix
-with import <nixpkgs> { }; # bring all of Nixpkgs into scope
+{ stdenv, fetchurl }: # declare dependencies as arguments
 
-stdenv.mkDerivation rec {
-  name = "hello-2.8";
+stdenv.mkDerivation (finalAttrs: {
+  pname = "hello";
+  version = "2.8";
   src = fetchurl {
-    url = "mirror://gnu/hello/${name}.tar.gz";
+    url = "mirror://gnu/hello/hello-${finalAttrs.version}.tar.gz";
     hash = "sha256-5rd/gffPfa761Kn1tl3myunD8TuM+66oy1O7XqVGDXM=";
   };
-}
+})
 ```
 
-This allows testing the package easily:
+This allows testing the package without building a whole system configuration:
 
 ```ShellSession
-$ nix-build my-hello.nix
+$ nix-build -E 'with import <nixpkgs> { }; callPackage ./my-hello.nix { }'
 $ ./result/bin/hello
 Hello, world!
 ```

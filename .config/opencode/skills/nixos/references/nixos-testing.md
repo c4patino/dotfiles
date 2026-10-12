@@ -11,14 +11,6 @@ NixOS tests are kept in the directory `nixos/tests`, and are executed
 (using Nix) by a testing framework that automatically starts one or more
 virtual machines containing the NixOS system(s) required for the test.
 
-```{=include=} sections
-writing-nixos-tests.section.md
-running-nixos-tests.section.md
-running-nixos-tests-interactively.section.md
-linking-nixos-tests-to-packages.section.md
-testing-hardware-features.section.md
-```
-
 ---
 
 # Writing Tests {#sec-writing-nixos-tests}
@@ -115,6 +107,10 @@ cd /my/git/clone/of/nixpkgs
 nix-build -A nixosTests.hostname
 ```
 
+In-tree tests run with a few changes to defaults, notably
+- The `pkgs.*` are read only by default. You can opt out with `node.pkgsReadOnly = false;` at the test level.
+- `nix.enable` defaults to `false` to reduce build closure size; in particular the reverse build closure of `nix` and its dependencies.
+
 ### Testing outside the NixOS project {#sec-call-nixos-test-outside-nixos}
 
 Outside the `nixpkgs` repository, you can use the `runNixOSTest` function from
@@ -126,12 +122,15 @@ let
 
 in
 pkgs.testers.runNixOSTest {
+  name = "test";
   imports = [ ./test.nix ];
   defaults.services.foo.package = mypkg;
 }
 ```
 
 `runNixOSTest` returns a derivation that runs the test.
+
+Out-of-tree tests evaluate with a set of defaults that balances the principle of least surprise in the general case, but has a few differences from in-tree NixOS tests. See [Testing within NixOS](#sec-call-nixos-test-in-nixos).
 
 ## Test machines {#ssec-nixos-test-machines}
 
