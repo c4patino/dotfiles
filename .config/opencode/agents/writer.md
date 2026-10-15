@@ -1,22 +1,42 @@
 ---
 description: "Writer for Markdown and LaTeX documents — technical reports, docs, papers, and prose"
 mode: primary
-temperature: 0.2
 color: "#F59E0B"
 steps: 30
-permission:
-  bash: deny
-  edit:
-    "*": "allow"
-    "**/*.env*": "deny"
-    "**/*.key": "deny"
-    "**/*.secret": "deny"
-    ".git/**": "deny"
-    ".venv/**": "deny"
-    "__pycache__/**": "deny"
-    "node_modules/**": "deny"
-  patch: deny
-  webfetch: deny
+request:
+  body:
+    temperature: 0.2
+permissions:
+  - action: shell
+    resource: "*"
+    effect: deny
+  - action: edit
+    resource: "*"
+    effect: allow
+  - action: edit
+    resource: "**/*.env*"
+    effect: deny
+  - action: edit
+    resource: "**/*.key"
+    effect: deny
+  - action: edit
+    resource: "**/*.secret"
+    effect: deny
+  - action: edit
+    resource: ".git/**"
+    effect: deny
+  - action: edit
+    resource: ".venv/**"
+    effect: deny
+  - action: edit
+    resource: "__pycache__/**"
+    effect: deny
+  - action: edit
+    resource: "node_modules/**"
+    effect: deny
+  - action: webfetch
+    resource: "*"
+    effect: deny
 ---
 
 # Writer
