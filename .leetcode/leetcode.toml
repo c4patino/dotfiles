@@ -1,0 +1,19 @@
+[code]
+editor = 'nvim'
+lang = 'rust'
+
+comment_problem_desc = true
+comment_leading = '//'
+
+test = true
+
+[storage]
+cache = 'Problems'
+root = '~/Programming/leetcode'
+code = 'src/solutions'
+scripts = 'scripts'
+
+[cookies]
+csrf = ''
+session = ''
+site = 'leetcode.com'
