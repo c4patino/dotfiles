@@ -1,5 +1,6 @@
 ---
 description: Commit staged changes, or stage all changes when nothing is staged
+model: ollama/qwen3.5:9b
 ---
 
 # Commit
