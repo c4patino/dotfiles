@@ -44,18 +44,21 @@
   },
   "providers": {
     "ollama": {
+      "settings": {
+        "baseURL": "https://ollama.yumeami.sh/v1"
+      },
       "models": {
         "qwen3-coder-next:q4_K_M": {
           "name": "Qwen3 Coder Next",
           "limit": {
-            "context": 32768
+            "context": 65536
           }
         },
         "qwen3.5:9b": {
-          "limit": {
-            "context": 32768
-          },
           "name": "Qwen3.5 9B",
+          "limit": {
+            "context": 65536
+          }
         }
       }
     }
