@@ -2,12 +2,14 @@
 #  plugins
 #===============================================================================
 # direnv init
+$env:DIRENV_CONFIG = Join-Path $env:APPDATA "direnv\config"
+$env:XDG_DATA_HOME = Join-Path $env:APPDATA "direnv\data"
+$env:XDG_CACHE_HOME = Join-Path $env:APPDATA "direnv\cache"
 Invoke-Expression "$(direnv hook pwsh)"
-$env:DIRENV_CONFIG="%APPDATA%\direnv\config"
-$env:XDG_DATA_HOME="%APPDATA%\direnv\data"
-$env:XDG_CACHE_HOME="%APPDATA%\direnv\cache"
 
 # fzf init
+Import-Module PSReadLine
+Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # starship init
