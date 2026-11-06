@@ -33,7 +33,6 @@
     ".stowrc",
 
     ".assets",
-    ".forgejo",
     "httpd",
     "slurm",
     "tsdproxy",
