@@ -1,6 +1,5 @@
 ---
 description: Create a pull request using the project's PULL_REQUEST_TEMPLATE.md
-model: ollama/qwen3.5:9b
 ---
 
 # PR
