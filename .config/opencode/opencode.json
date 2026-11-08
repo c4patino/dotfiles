@@ -39,7 +39,7 @@
   ],
   "agents": {
     "title": {
-      "model": "ollama/qwen3.5:9b"
+      "model": "ollama/qwen3-coder-next:q4_K_M"
     }
   },
   "providers": {
