@@ -41,6 +41,9 @@
       "settings": {
         "baseURL": "https://ollama.yumeami.sh/v1"
       },
+      "compatibility": {
+        "reasoningField": "reasoning"
+      },
       "models": {
         "qwen3-coder-next:q4_K_M": {
           "name": "Qwen3 Coder Next",
@@ -53,29 +56,52 @@
           "limit": {
             "context": 65536
           },
-          "capabilities": {
-            "reasoning": {
-              "supported": true,
-              "toggle": true,
-              "effort": [
-                "low",
-                "medium",
-                "xhigh"
-              ]
+          "variants": [
+            {
+              "id": "none",
+              "body": {
+                "reasoning_effort": "none"
+              }
+            },
+            {
+              "id": "low",
+              "body": {
+                "reasoning_effort": "low"
+              }
+            },
+            {
+              "id": "medium",
+              "body": {
+                "reasoning_effort": "medium"
+              }
+            },
+            {
+              "id": "xhigh",
+              "body": {
+                "reasoning_effort": "xhigh"
+              }
             }
-          }
+          ]
         },
         "qwen3.5:9b": {
           "name": "Qwen3.5 9B",
           "limit": {
             "context": 65536
           },
-          "capabilities": {
-            "reasoning": {
-              "supported": true,
-              "toggle": true
+          "variants": [
+            {
+              "id": "none",
+              "body": {
+                "reasoning_effort": "none"
+              }
+            },
+            {
+              "id": "high",
+              "body": {
+                "reasoning_effort": "high"
+              }
             }
-          }
+          ]
         }
       }
     }
