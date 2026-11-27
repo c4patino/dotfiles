@@ -6,7 +6,7 @@
     {
       "action": "external_directory",
       "resource": "*",
-      "effect": "deny"
+      "effect": "ask"
     },
     {
       "action": "external_directory",
